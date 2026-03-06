@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <title>Mostra/Esconder imagem</title>
+    
+    
+    <style>
+        .container{
+            text-align: center;
+            margin-top: 50px;
+            background-color: yellowgreen;
+        }
+        h1{
+            
+            text-align:center ;
+        }
+        .img1{
+            max-width: 200px;
+            margin: 20px 0;
+            transition: opacity 0.3s ease;
+        }
+        .img2{
+            
+             max-width: 400px;
+            margin: 20px 0;
+            transition: opacity 0.3s ease;
+        }
+        .hidden {
+            display: none;
+        }
+        button{
+            padding: 20px 40px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: cadetblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body class="container">
+    <div class="container">
+        <h1>Mostra/Esconder imagem</h1>
+        
+        <img class="img1" id="minhaImagem" src="https://static.nationalgeographicbrasil.com/files/styles/image_3200/public/golden_lion_tamarin_portrait3_bx.webp?w=1600&h=1837&p=top" alt="Imagem de animal">
+
+        <br>
+
+    <button id="toggleBnt" type="button" onclick="toggleImagem()">Hide</button>
+    <div class="container">
+        
+        
+        <img class="img2" id="minhaImagem2" src="https://img.freepik.com/fotos-gratis/tigre-olhando-com-a-boca-aberta_1150-18083.jpg?semt=ais_hybrid&w=740&q=80" alt="Imagem de animal">
+
+        <br>
+
+    <button id="toggleBnt2" type="button" onclick="toggleImagem()">Hide</button>
+    
+</div>
+</div>
+
+
+
+
+    
+</body>
+</html>

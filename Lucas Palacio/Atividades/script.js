@@ -28,5 +28,9 @@ botao2.addEventListener('click',function(){
         botao2.classList.remove('show-mode');
     }
 });
+<<<<<<< HEAD
 });
 
+=======
+});
+>>>>>>> 11e63403101468934ad064afe24359754668b149

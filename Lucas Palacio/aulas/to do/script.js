@@ -25,6 +25,8 @@ window.onload = function() {
         btnRemover.textContent= "x";
         //add a casse de estilo do botão fechar
         btnRemover.classList.add("fechar");
+        
+        
         btnRemover.addEventListener("click",() => {
             li.remove();
         });
