@@ -43,24 +43,28 @@ export default {
     };
   },
   methods: {
-    adicionarTarefa() {
-      // Validação simples para não adicionar texto vazio
-      if (this.novaTarefa.trim() !== "") {
-        this.tarefas.push({
-          texto: this.novaTarefa,
-          finalizada: false
-        });
-        this.novaTarefa = ""; // Limpa o input após adicionar
-      }
-    },
+  adicionarTarefa() {
+  const textoLimpo = this.novaTarefa.trim(); // Armazena o valor tratado
+  
+  if (textoLimpo !== "") {
+    this.tarefas.push({
+      texto: textoLimpo,
+      finalizada: false
+    });
+    this.novaTarefa = "";
+  }
+},
     marcarConcluida(index) {
       // Inverte o status de finalizada
       this.tarefas[index].finalizada = !this.tarefas[index].finalizada;
     },
-    removerTarefa(index) {
-      // Remove o item do array pelo índice
-      this.tarefas.splice(index, 1);
-    }
+   removerTarefa(index) {
+  const tarefaSelecionada = this.tarefas[index];
+  
+  if (confirm(`Deseja excluir a tarefa: ${tarefaSelecionada.texto}?`)) {
+    this.tarefas.splice(index, 1);
+  }
+}
   }
 };
 </script>
