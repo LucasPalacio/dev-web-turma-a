@@ -33,7 +33,7 @@ export default{
             //lista inicial de objetos
             tarefas: [
                 {texto: "Estudar vue 3", finalizada:false},
-                {texto: "Fazer café", finalizada:false}
+                {texto: "Fazer café", finalizada:true}
             ]
         };
     },
@@ -67,5 +67,46 @@ export default{
     max-width: 400px;
     margin: 20px auto;
     font-family: Arial, Helvetica, sans-serif;
+ }
+
+ .input-group{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+ }
+
+ input{
+    flex: 1;
+    padding: 8px;
+ }
+
+ ul{
+    list-style: none;
+    padding: 0;
+ }
+ li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+ }
+ .concluida{
+    text-decoration: line-through;
+    color: #888;
+ }
+
+ .acoes{
+    display: flex;
+    gap: 5px;
+ }
+
+ .btn-remover{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
  }
 </style>
