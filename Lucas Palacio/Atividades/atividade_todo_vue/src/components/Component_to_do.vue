@@ -1,4 +1,29 @@
+<template>
+<div id="app">
+<h2>Minha lista de Tarefas</h2>
+<div class="todo-container">
+    <input type="text"
+    v-model="novaTarefa"
+    placeholder="Digite uma tarefa..."
+    @keyup.enter="adicionarTarefa"
+    >
+    <button @click="adicionarTarefa">Adicionar</button>
+    </div>
+    <ul>
+        <li v-for="(tarefa, index) in tarefas" :key="index">
+            <span :class="{concluida: tarefa.finalizada}">
+                {{ tarefa.texto }}
+            </span>
 
+            <div class="acoes">
+                <button @click="marcarConcluida">{{ tarefa.finalizada ?'Desfazer' : 'Concluir' }}
+                </button>
+                <button @click="removerTarefa" class="btn-remover">Remover</button>
+            </div>
+        </li>
+</ul>
+</div>
+</template>
 
 <script>
 export default{
