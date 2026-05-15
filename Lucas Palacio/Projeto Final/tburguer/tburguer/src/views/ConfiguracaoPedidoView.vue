@@ -1,16 +1,29 @@
 <template>
     <div>
-        <h1>Cofiuração do Pedidos</h1>
+        <h1>Configuração do Pedido</h1>
+        <pedido-component-vue :burguer="this.hamburguerSelecionado"/>
     </div>
 </template>
-
 <script>
-export default{
-    name: 'ConfiguracaoPedidoView',
+import PedidoComponentVue from '@/components/PedidoComponent.vue';
 
-}
+    export default {
+        name: 'ConfiguracaoPedidoView',
+        components: 
+        { PedidoComponentVue,
+         },
+        data() {
+            return {
+                hamburguerSelecionado: null,
+            };
+        },
+        mounted() {
+            const query = this.$route.query;
+            if(query.burguer) {
+                const decodeBurguer = JSON.parse(decodeURIComponent(query.burguer));
+                this.hamburguerSelecionado = decodeBurguer;
+            }
+        }
+    };
 </script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
